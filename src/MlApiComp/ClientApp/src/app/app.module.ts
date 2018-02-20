@@ -11,6 +11,9 @@ import { CounterComponent } from './counter/counter.component';
 import { FetchDataComponent } from './fetch-data/fetch-data.component';
 import { NavbarComponent } from './navbar/navbar.component';
 
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatButtonModule, MatCheckboxModule } from '@angular/material';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,6 +27,9 @@ import { NavbarComponent } from './navbar/navbar.component';
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
     HttpClientModule,
     FormsModule,
+    BrowserAnimationsModule,
+    MatButtonModule,
+    MatCheckboxModule,
     RouterModule.forRoot([
       { path: '', component: HomeComponent, pathMatch: 'full' },
       { path: 'counter', component: CounterComponent },
