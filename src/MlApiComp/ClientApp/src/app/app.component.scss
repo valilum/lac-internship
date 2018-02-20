@@ -1,0 +1,45 @@
+// $header-height: 70px;
+
+body {
+  font-family: Roboto, 'Helvetica Neue', sans-serif;
+  // Helps fonts on OSX looks more consistent with other systems
+  // Isn't currently in button styles due to performance concerns
+  * {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+h3 {
+  text-align: center;
+  margin-bottom: 0.5em;
+}
+
+app-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  // height: $header-height;
+}
+
+.content {
+  // padding: 32px;
+  box-sizing: border-box;
+  max-width: 80%;
+  margin: 1em auto;
+  text-align: center;
+  justify-content: space-between;
+  // top: $header-height;
+}
+
+app-root {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 56px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
