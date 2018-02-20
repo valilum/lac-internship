@@ -1,17 +1,19 @@
 # Introduction 
-TODO: Give a short introduction of your project. Let this section explain the objectives or the motivation behind this project. 
+The scope of this project is to famialirize with principles of developing SPA application. We're going to use Angular 5 framework for client UI and .NET Core for backend. The 
 
-# Getting Started
-TODO: Guide users through getting your code up and running on their own system. In this section you can talk about:
-1.	Installation process
-2.	Software dependencies
-3.	Latest releases
-4.	API references
+# Study plan
+Below are listed to lessons:
+1.	Introduction - install and configure environment. Familiarize with git. Launch application.
+2.	Components - study what is a compinent. Add Display image component
+3.	Image upload component
+4.	Image galey
+5.  Call Image Recognition API and display results
 
-# Build and Test
-TODO: Describe and show how to build your code and run the tests. 
 
-# Contribute
+
+
+
+# IGNORE
 TODO: Explain how other users and developers can contribute to make your code better. 
 
 If you want to learn more about creating good readme files then refer the following [guidelines](https://www.visualstudio.com/en-us/docs/git/create-a-readme). You can also seek inspiration from the below readme files:
