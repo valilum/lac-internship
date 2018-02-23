@@ -42,35 +42,44 @@ The scope of this project is to famialirize with principles of developing SPA ap
         - Change "Hello world" text
     - HTML/CSS/SCSS
         - Change styles
-2.  Angular project structure
-    - architecture
-    - fix unit tests
+2.  Introduction to C# and .NET Unit tests
+    - Fix unit test
+    - Write unit test
+3.  Introduction to TypeScript and TypeScript Unit tests
+    - Fix unit test
+    - Write unit test
+4.  Angular project structure
+    - architecture    
     - CLI 
-3.  Template & Data binding
+5.  Template & Data binding
     - Components
         - Image galery component
     - Directives
         - Loader directive
-4.  HTTP protocol
+6.	Angular Routing
+    - Create Menu
+7.  HTTP protocol
     - .NET Core API
-    - Swagger
+    - Swagger        
     - CRUD and HTTP Verbs
         - Image upload API (CRUD)
-5.  Image
+8.  Image
     - Image upload component
     - Angular Http Client
         - Call .NET Core API
         - Call ML API from Angular
-5.	Data persistance
+9.	Data persistance
     - Entity Framework
         - Create DB
         - EF Migrations
         - Create "Test" Entity and table
         - CRUD Web API for "Test" Entity
-6.	Angular Routing & Unit Tests
-    - Create Menu
-    - Create Unit tests
-7.  
-8.  Routing?
+10. CI
+    - DevOps culture
+    - CI concepts & philosophy
+    - Setup build
+11. Continuous deployment
+    - Continuous deployment philosophy 
+    - Setup a Continuous deployment
 
 
