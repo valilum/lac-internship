@@ -5,9 +5,11 @@ The scope of this project is to famialirize with principles of developing SPA ap
  - VS2017
  - SQLServer 2017
  - Git
+ - P4Merge
  - nodejs
  - npm
  - angular cli
+ 
 
 # Study plan
 
