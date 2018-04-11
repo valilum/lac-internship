@@ -1,6 +1,14 @@
 # Introduction 
 The scope of this project is to famialirize with principles of developing SPA application. We're going to use Angular 5 framework for client UI and .NET Core for backend. The 
 
+# Required tools:
+ - VS2017
+ - SQLServer 2017
+ - Git
+ - nodejs
+ - npm
+ - angular cli
+
 # Study plan
 
 ## Angular topics:
