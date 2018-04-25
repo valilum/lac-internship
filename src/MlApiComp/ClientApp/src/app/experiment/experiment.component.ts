@@ -14,7 +14,7 @@ export class ExperimentComponent implements OnInit {
 
   onSubmit() {
     var form = document.getElementById('create-form');
-    form.submit();
+    //form.submit();
  }
 
 }
