@@ -12,4 +12,9 @@ export class ExperimentComponent implements OnInit {
   ngOnInit() {
   }
 
+  onSubmit() {
+    var form = document.getElementById('create-form');
+    form.submit();
+ }
+
 }
