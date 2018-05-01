@@ -13,6 +13,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule, MatCheckboxModule } from '@angular/material';
 import { ExperimentComponent } from './experiment/experiment.component';
 
+import { ExperimentService } from './services/experiment.service'
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,7 +34,9 @@ import { ExperimentComponent } from './experiment/experiment.component';
       { path: '', component: HomeComponent, pathMatch: 'full' },
     ])
   ],
-  providers: [],
+  providers: [
+    ExperimentService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
