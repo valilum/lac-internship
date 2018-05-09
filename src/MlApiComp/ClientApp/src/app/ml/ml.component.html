@@ -2,18 +2,18 @@
   <div class="col-md-3">
     <input type="file" (change)="onFileSelected($event)">
     <div class="image-wrapper">
-      <img *ngIf="path != null" [src]="path" class="img-thumbnail img-responsive">
+      <img *ngIf="previewPath != null" [src]="previewPath" class="img-thumbnail img-responsive">
     </div>
     <button class="btn btn-success" (click)="getImageInformation()">Process with AI</button>
   </div>
   <div class="col-md-9">
     <div>
       <h4>Response from Microsoft Azure Computer Vision API</h4>
-      <p>{{fileDetails}}</p>
+      <p>{{azureApiResponse}}</p>
     </div>
     <div>
       <h4>Response from Google Clout Platform Vision PI</h4>
-      <p>{{googleImginfo}}</p>
+      <p>{{googleApiResponse}}</p>
     </div>
   </div>
 </div>

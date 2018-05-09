@@ -18,6 +18,7 @@ import { ExperimentService } from './services/experiment.service';
 import { AzureImageService } from './services/azure-image.service';
 import { GoogleImageService } from './services/google-image.service';
 import { MlComponent } from './ml/ml.component'
+import { MlService } from './services/ml.service';
 
 @NgModule({
   declarations: [
@@ -44,7 +45,8 @@ import { MlComponent } from './ml/ml.component'
   providers: [
     ExperimentService,
     AzureImageService,
-    GoogleImageService
+    GoogleImageService,
+    MlService,
   ],
   bootstrap: [AppComponent]
 })

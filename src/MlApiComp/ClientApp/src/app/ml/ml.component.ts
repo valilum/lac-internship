@@ -1,99 +1,39 @@
 import { Component, OnInit } from '@angular/core';
 import { environment } from '../../environments/environment';
-import { AzureImageService } from '../services/azure-image.service';
-import { GoogleImageService } from '../services/google-image.service'
 import { FormGroup, FormControl, ReactiveFormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { MlService } from '../services/ml.service';
 
 @Component({
   selector: 'app-ml',
   templateUrl: './ml.component.html',
   styleUrls: ['./ml.component.scss']
 })
-export class MlComponent implements OnInit {
+export class MlComponent {
 
-  path: string;
-  formData: any;
-  fileDetails: any;
-  form: FormGroup;
-  imgBinary: any;
-  googleImginfo: any;
+  previewPath: string;
+  googleApiResponse: string;
+  azureApiResponse: string;
+  file: Blob;
 
-  constructor(private azure: AzureImageService,
-    private google: GoogleImageService) { }
-
-
-
-  ngOnInit() {
-  }
+  constructor(private mlservice: MlService) { }
 
   onFileSelected(event) {
-    this.path = event.target.files[0];
+
+    this.file = event.target.files[0];
     let reader = new FileReader();
-
     reader.onload = (e: any) => {
-      this.path = e.target.result;
-
+      this.previewPath = e.target.result;
     }
 
-    reader.readAsDataURL(event.target.files[0]);
-
-    let reader2 = new FileReader();
-    reader2.onloadend = () => {
-      console.log(reader2.result)
-      this.imgBinary = reader2.result;
-    }
-    reader2.readAsArrayBuffer(event.target.files[0])
-
+    reader.readAsDataURL(this.file);
   }
 
   getImageInformation() {
-    console.log("Triggered")
-    this.azure.getInformation(this.imgBinary).subscribe(response => {
-      this.fileDetails = JSON.stringify(response);
-      console.log(this.fileDetails)
-    });
-    this.getGoogleImgInfo();
+    this.mlservice.predictGoogle(this.file)
+      .subscribe(x => this.googleApiResponse = x);
 
+    this.mlservice.predictAzure(this.file)
+      .subscribe(x => this.azureApiResponse = x);
   }
-
-  getGoogleImgInfo() {
-
-    var body: any;
-    var photo = this.path.substring(23);
-    body = {
-      "requests": [
-        {
-          "image": {
-            "content": photo
-          },
-          "features": [
-            {
-              "type": "LABEL_DETECTION",
-            },
-
-            {
-              "type": "FACE_DETECTION"
-            },
-
-            {
-              "type": "LANDMARK_DETECTION"
-            },
-
-            {
-              "type": "SAFE_SEARCH_DETECTION"
-            }
-          ]
-        }
-      ]
-
-    }
-
-    this.google.getGoogleImageInformation(JSON.stringify(body)).subscribe(response => {
-      this.googleImginfo = JSON.stringify(response)
-      console.log(this.googleImginfo);
-    })
-
-  }
-
 }
