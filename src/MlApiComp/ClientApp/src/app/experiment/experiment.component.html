@@ -2,25 +2,43 @@
   <form id="create-form" (ngSubmit)="onSubmit(this)">
     <div class="row">
       <label>Name:</label>
-      <input name="Name" type="text" id="ExperimentName"  [(ngModel)]="experiment.name"/>
+      <input name="Name" type="text" [(ngModel)]="experiment.name" />
+
     </div>
     <div class="row">
       <label>Event date:</label>
-      <input name="EventDate" type="date"id="Date" [(ngModel)]="experiment.eventDate"/>
+      <input name="EventDate" type="date"  [(ngModel)]="experiment.eventdate" />
     </div>
     <div class="row">
       <label>Executor name:</label>
-      <input name="ExecutorName" type="text" id="ExecutorName" [(ngModel)]="experiment.executorName"/>
+      <input name="ExecutorName" type="text" [(ngModel)]="experiment.executorName" />
     </div>
     <div class="row">
       <label>Cost:</label>
       <input name="Cost" type="number" id="Cost" [(ngModel)]="experiment.cost" />
     </div>
-    <input class ="submit-btn" type="submit" value="Submit" />
+    <input class="submit-btn" type="submit" value="Submit" />
+
 
     <p>
-      {{experiment.executorName}}
+      Experiment name: {{experiment.name}}
     </p>
+
+    <p>
+      Date: {{experiment.eventDate}}
+    </p>
+
+    <p>
+      Executor name: {{experiment.executorName}}
+    </p>
+
+
+    <p>
+      Cost: {{experiment.cost}}
+    </p>
+
+
+
 
   </form>
 </div>
